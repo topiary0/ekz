@@ -17,7 +17,6 @@ namespace DriveStockExam
         private void StartWindow_Load(object sender, EventArgs e)
         {
             Program.SetLogo(logoPictureBox);
-            titleLabel.Text = Text;
             logoPictureBox.Visible = logoPictureBox.Image != null;
             passwordTextBox.UseSystemPasswordChar = true;
             loginTextBox.Select();

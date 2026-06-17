@@ -47,7 +47,7 @@ namespace DriveStockExam
             // 
             // titleLabel
             // 
-            this.titleLabel.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.Location = new System.Drawing.Point(148, 8);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
@@ -141,7 +141,7 @@ namespace DriveStockExam
             // 
             // priceLabel
             // 
-            this.priceLabel.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.priceLabel.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.priceLabel.Location = new System.Drawing.Point(540, 64);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
@@ -151,7 +151,7 @@ namespace DriveStockExam
             // 
             // oldPriceLabel
             // 
-            this.oldPriceLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oldPriceLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.oldPriceLabel.Location = new System.Drawing.Point(540, 81);
             this.oldPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.oldPriceLabel.Name = "oldPriceLabel";

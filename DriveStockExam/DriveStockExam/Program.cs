@@ -13,10 +13,10 @@ namespace DriveStockExam
         public const int ClientRoleId = 3;
 
         public static readonly Color MainBackColor = Color.White;
-        public static readonly Color SecondaryBackColor = ColorTranslator.FromHtml("#6A5ACD");
-        public static readonly Color AccentColor = ColorTranslator.FromHtml("#4B0082");
-        public static readonly Color HighSaleColor = ColorTranslator.FromHtml("#483D8B");
-        public static readonly Font MainFont = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        public static readonly Color SecondaryBackColor = ColorTranslator.FromHtml("#00FFFF");
+        public static readonly Color AccentColor = ColorTranslator.FromHtml("#0000FF");
+        public static readonly Color HighSaleColor = ColorTranslator.FromHtml("#008080");
+        public static readonly Font MainFont = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
 
         [STAThread]
         private static void Main()
@@ -58,7 +58,7 @@ namespace DriveStockExam
         {
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
-            button.BackColor = SecondaryBackColor;
+            button.BackColor = AccentColor;
             button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
@@ -66,9 +66,9 @@ namespace DriveStockExam
         public static void ApplyPlainButton(Button button)
         {
             button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderColor = SecondaryBackColor;
-            button.BackColor = Color.White;
-            button.ForeColor = AccentColor;
+            button.FlatAppearance.BorderColor = AccentColor;
+            button.BackColor = AccentColor;
+            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
@@ -84,7 +84,7 @@ namespace DriveStockExam
             gridView.DefaultCellStyle.Font = MainFont;
             gridView.DefaultCellStyle.SelectionBackColor = AccentColor;
             gridView.DefaultCellStyle.SelectionForeColor = Color.White;
-            gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
         }
 
         public static void SetLogo(PictureBox pictureBox)
@@ -141,10 +141,53 @@ namespace DriveStockExam
             }
             catch (Exception)
             {
-                // Если иконка не загрузилась, используем стандартную
+                // Если файл .ico поврежден или имеет неверный формат, пробуем собрать иконку из PNG-логотипа.
+            }
+
+            try
+            {
+                Icon icon = CreateIconFromPng("icon.png");
+                if (icon != null)
+                {
+                    return icon;
+                }
+            }
+            catch (Exception)
+            {
+                // Если иконка не загрузилась, используем стандартную.
             }
 
             return SystemIcons.Application;
+        }
+
+        private static Icon CreateIconFromPng(string fileName)
+        {
+            string path = GetAssetPath(fileName);
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+
+            byte[] pngBytes = File.ReadAllBytes(path);
+            using (MemoryStream stream = new MemoryStream())
+            using (BinaryWriter writer = new BinaryWriter(stream))
+            {
+                writer.Write((ushort)0);
+                writer.Write((ushort)1);
+                writer.Write((ushort)1);
+                writer.Write((byte)0);
+                writer.Write((byte)0);
+                writer.Write((byte)0);
+                writer.Write((byte)0);
+                writer.Write((ushort)1);
+                writer.Write((ushort)32);
+                writer.Write(pngBytes.Length);
+                writer.Write(22);
+                writer.Write(pngBytes);
+                writer.Flush();
+                stream.Position = 0;
+                return new Icon(stream);
+            }
         }
     }
 }

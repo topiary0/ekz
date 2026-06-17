@@ -52,7 +52,7 @@ namespace DriveStockExam
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(66, 18);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -236,7 +236,7 @@ namespace DriveStockExam
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(829, 478);
             this.Name = "GoodsWindow";
-            this.Text = "ВелосипедДрайв - товары";
+            this.Text = "DemoMebel - товары";
             this.Load += new System.EventHandler(this.GoodsWindow_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
