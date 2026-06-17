@@ -17,7 +17,7 @@ namespace DriveStockExam
         private void StartWindow_Load(object sender, EventArgs e)
         {
             Program.SetLogo(logoPictureBox);
-            titleLabel.Text = Text;
+            titleLabel.Text = "ООО «МебельОрг»";
             logoPictureBox.Visible = logoPictureBox.Image != null;
             passwordTextBox.UseSystemPasswordChar = true;
             loginTextBox.Select();
