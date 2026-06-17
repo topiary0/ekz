@@ -1,0 +1,111 @@
+using System;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+
+namespace DriveStockExam
+{
+    public partial class GoodsCard : UserControl
+    {
+        private readonly DataRow productRow;
+        private readonly bool canDelete;
+        private readonly Action<string> deleteAction;
+
+        public GoodsCard()
+        {
+            InitializeComponent();
+            Font = Program.MainFont;
+            Program.ApplyPlainButton(deleteButton);
+            Program.SetPlaceholder(productPictureBox);
+        }
+
+        public GoodsCard(DataRow row, bool showDeleteButton, Action<string> deleteProduct)
+            : this()
+        {
+            productRow = row;
+            canDelete = showDeleteButton;
+            deleteAction = deleteProduct;
+            FillCard();
+        }
+
+        private void FillCard()
+        {
+            string article = Convert.ToString(productRow["article"]);
+            string name = Convert.ToString(productRow["name"]);
+            string category = Convert.ToString(productRow["category_name"]);
+            string manufacturer = Convert.ToString(productRow["manufacturer_name"]);
+            string supplier = Convert.ToString(productRow["supplier_name"]);
+            string measurement = Convert.ToString(productRow["measurment"]);
+            string description = Convert.ToString(productRow["describe"]);
+            int sale = Convert.ToInt32(productRow["sale"]);
+            int warehouse = Convert.ToInt32(productRow["warehouse"]);
+            double price = Convert.ToDouble(productRow["price"]);
+
+            titleLabel.Text = name;
+            articleLabel.Text = "Артикул: " + article;
+            categoryLabel.Text = "Категория: " + category;
+            manufacturerLabel.Text = "Производитель: " + manufacturer;
+            supplierLabel.Text = "Поставщик: " + supplier;
+            measurementLabel.Text = "Ед. изм.: " + measurement;
+            warehouseLabel.Text = "Остаток: " + warehouse;
+            descriptionLabel.Text = "Описание: " + description;
+            saleLabel.Text = "Скидка " + sale + "%";
+
+            string pictureName = Convert.ToString(productRow["picture"]);
+            string picturePath = Program.GetAssetPath(pictureName);
+            productPictureBox.Image = File.Exists(picturePath) ? Program.LoadImage(picturePath) : Program.LoadImage(Program.GetAssetPath("picture.png"));
+
+            if (sale > 0)
+            {
+                double finalPrice = price * (100 - sale) / 100;
+                oldPriceLabel.Text = price.ToString("N2") + " руб.";
+                oldPriceLabel.Visible = true;
+                priceLabel.Text = finalPrice.ToString("N2") + " руб.";
+            }
+            else
+            {
+                oldPriceLabel.Visible = false;
+                priceLabel.Text = price.ToString("N2") + " руб.";
+            }
+
+            if (sale > 15)
+            {
+                BackColor = Program.HighSaleColor;
+                ApplyTextColor(Color.White);
+            }
+            else
+            {
+                BackColor = Color.White;
+                ApplyTextColor(Color.Black);
+            }
+
+            saleLabel.BackColor = Program.SecondaryBackColor;
+            saleLabel.ForeColor = Color.White;
+            deleteButton.Visible = canDelete;
+        }
+
+        private void ApplyTextColor(Color color)
+        {
+            titleLabel.ForeColor = color;
+            articleLabel.ForeColor = color;
+            categoryLabel.ForeColor = color;
+            manufacturerLabel.ForeColor = color;
+            supplierLabel.ForeColor = color;
+            measurementLabel.ForeColor = color;
+            warehouseLabel.ForeColor = color;
+            descriptionLabel.ForeColor = color;
+            priceTitleLabel.ForeColor = color;
+            priceLabel.ForeColor = color;
+            oldPriceLabel.ForeColor = color;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (deleteAction != null)
+            {
+                deleteAction(Convert.ToString(productRow["article"]));
+            }
+        }
+    }
+}

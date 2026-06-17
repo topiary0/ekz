@@ -1,0 +1,58 @@
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\1.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\10.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\2.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\3.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\4.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\5.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\6.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\7.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\8.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\9.JPG
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.ico
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.jpg
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.png
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\Assets\picture.png
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe.config
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.pdb
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.exe
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.pdb
+C:\Users\user\Desktop\Карина экзамен\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.exe.config
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.exe
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.pdb
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\1.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\10.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\2.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\3.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\4.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\5.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\6.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\7.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\8.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\9.JPG
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.ico
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.jpg
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\icon.png
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\Assets\picture.png
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe.config
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe
+C:\Users\User\Desktop\Подготовка Дэмо 4\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.pdb
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe.config
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.exe
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\bin\Debug\DriveStockExam.pdb
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.AssemblyReference.cache
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.CoreCompileInputs.cache
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.exe
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.pdb
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.Properties.Resources.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.csproj.GenerateResource.cache
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.AddGoodWindow.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.GoodsCard.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.GoodsWindow.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.RequestsWindow.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.RequestWindow.resources
+C:\Users\Иван\OneDrive\Рабочий стол\Румянцев Иван\DriveStockExam\DriveStockExam\obj\Debug\DriveStockExam.StartWindow.resources
