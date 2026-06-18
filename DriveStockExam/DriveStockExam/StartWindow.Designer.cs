@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class StartWindow
     {
@@ -17,6 +17,7 @@ namespace DriveStockExam
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartWindow));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -25,6 +26,7 @@ namespace DriveStockExam
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.showPasswordButton = new System.Windows.Forms.Button();
             this.guestButton = new System.Windows.Forms.Button();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
@@ -98,8 +100,21 @@ namespace DriveStockExam
             this.passwordTextBox.Location = new System.Drawing.Point(44, 148);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(276, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(184, 24);
             this.passwordTextBox.TabIndex = 4;
+            // 
+            // showPasswordButton
+            // 
+            this.showPasswordButton.BackColor = System.Drawing.Color.FromArgb(0, 0, 255);
+            this.showPasswordButton.ForeColor = System.Drawing.Color.White;
+            this.showPasswordButton.Location = new System.Drawing.Point(235, 147);
+            this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2);
+            this.showPasswordButton.Name = "showPasswordButton";
+            this.showPasswordButton.Size = new System.Drawing.Size(84, 25);
+            this.showPasswordButton.TabIndex = 5;
+            this.showPasswordButton.Text = "Показать";
+            this.showPasswordButton.UseVisualStyleBackColor = false;
+            this.showPasswordButton.Click += new System.EventHandler(this.showPasswordButton_Click);
             // 
             // loginButton
             // 
@@ -108,7 +123,7 @@ namespace DriveStockExam
             this.loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(274, 25);
-            this.loginButton.TabIndex = 5;
+            this.loginButton.TabIndex = 6;
             this.loginButton.Text = "Войти";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -120,7 +135,7 @@ namespace DriveStockExam
             this.guestButton.Margin = new System.Windows.Forms.Padding(2);
             this.guestButton.Name = "guestButton";
             this.guestButton.Size = new System.Drawing.Size(274, 25);
-            this.guestButton.TabIndex = 6;
+            this.guestButton.TabIndex = 7;
             this.guestButton.Text = "Войти как гость";
             this.guestButton.UseVisualStyleBackColor = false;
             this.guestButton.Click += new System.EventHandler(this.guestButton_Click);
@@ -134,6 +149,7 @@ namespace DriveStockExam
             this.BackColor = System.Drawing.Color.FromArgb(255, 255, 255); // #FFFFFF
             this.ClientSize = new System.Drawing.Size(363, 263);
             this.Controls.Add(this.guestButton);
+            this.Controls.Add(this.showPasswordButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -143,6 +159,7 @@ namespace DriveStockExam
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartWindow";
             this.Text = "DemoMebel - вход";
             this.Load += new System.EventHandler(this.StartWindow_Load);
@@ -163,6 +180,7 @@ namespace DriveStockExam
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button showPasswordButton;
         private System.Windows.Forms.Button guestButton;
     }
 }

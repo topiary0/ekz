@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class GoodsCard
     {

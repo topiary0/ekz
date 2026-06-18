@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class RequestWindow
     {
@@ -17,6 +17,7 @@ namespace DriveStockExam
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestWindow));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.idLabel = new System.Windows.Forms.Label();
@@ -315,6 +316,7 @@ namespace DriveStockExam
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RequestWindow";
             this.Text = "Заказ";
             this.Load += new System.EventHandler(this.RequestWindow_Load);

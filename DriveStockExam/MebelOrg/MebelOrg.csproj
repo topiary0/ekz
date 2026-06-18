@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3EA5D5F-5C5D-4D61-B33B-F7C455BD41A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DemoMebel</RootNamespace>
+    <AssemblyName>MebelOrg</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "><PlatformTarget>AnyCPU</PlatformTarget><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>bin\Debug\</OutputPath><DefineConstants>DEBUG;TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "><DebugType>pdbonly</DebugType><Optimize>true</Optimize><OutputPath>bin\Release\</OutputPath><DefineConstants>TRACE</DefineConstants><WarningLevel>4</WarningLevel></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Configuration" /><Reference Include="System.Core" /><Reference Include="System.Data" /><Reference Include="System.Data.DataSetExtensions" /><Reference Include="System.Drawing" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /></ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DriveStockExam\RequestWindow.cs"><Link>RequestWindow.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\GoodsWindow.cs"><Link>GoodsWindow.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\AddGoodWindow.Designer.cs"><Link>AddGoodWindow.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\GoodsWindow.Designer.cs"><Link>GoodsWindow.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\RequestWindow.Designer.cs"><Link>RequestWindow.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\StartWindow.Designer.cs"><Link>StartWindow.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\MainDataSet.Designer.cs"><Link>MainDataSet.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\RequestsWindow.Designer.cs"><Link>RequestsWindow.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\GoodsCard.Designer.cs"><Link>GoodsCard.Designer.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\Program.cs"><Link>Program.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\AddGoodWindow.cs"><Link>AddGoodWindow.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\StartWindow.cs"><Link>StartWindow.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\RequestsWindow.cs"><Link>RequestsWindow.cs</Link></Compile>
+    <Compile Include="..\DriveStockExam\GoodsCard.cs"><Link>GoodsCard.cs</Link></Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\DriveStockExam\Properties\Resources.Designer.cs"><Link>Properties\Resources.Designer.cs</Link><AutoGen>True</AutoGen><DesignTime>True</DesignTime><DependentUpon>Resources.resx</DependentUpon></Compile>
+    <Compile Include="..\DriveStockExam\Properties\Settings.Designer.cs"><Link>Properties\Settings.Designer.cs</Link><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon><DesignTimeSharedInput>True</DesignTimeSharedInput></Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DriveStockExam\App.config"><Link>App.config</Link></None>
+    <None Include="..\DriveStockExam\Properties\Settings.settings"><Link>Properties\Settings.settings</Link><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\DriveStockExam\AddGoodWindow.resx"><Link>AddGoodWindow.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\GoodsCard.resx"><Link>GoodsCard.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\StartWindow.resx"><Link>StartWindow.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\RequestsWindow.resx"><Link>RequestsWindow.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\RequestWindow.resx"><Link>RequestWindow.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\GoodsWindow.resx"><Link>GoodsWindow.resx</Link></EmbeddedResource>
+    <EmbeddedResource Include="..\DriveStockExam\Properties\Resources.resx"><Link>Properties\Resources.resx</Link><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\DriveStockExam\Assets\icon.jpg"><Link>Assets\icon.jpg</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\7.JPG"><Link>Assets\7.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\6.JPG"><Link>Assets\6.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\5.JPG"><Link>Assets\5.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\10.JPG"><Link>Assets\10.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\icon.ico"><Link>Assets\icon.ico</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\1.JPG"><Link>Assets\1.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\icon.png"><Link>Assets\icon.png</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\2.JPG"><Link>Assets\2.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\3.JPG"><Link>Assets\3.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\9.JPG"><Link>Assets\9.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\picture.png"><Link>Assets\picture.png</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\4.JPG"><Link>Assets\4.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+    <Content Include="..\DriveStockExam\Assets\8.JPG"><Link>Assets\8.JPG</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

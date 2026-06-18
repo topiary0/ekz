@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class AddGoodWindow
     {
@@ -17,6 +17,7 @@ namespace DriveStockExam
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddGoodWindow));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.articleLabel = new System.Windows.Forms.Label();
@@ -368,6 +369,7 @@ namespace DriveStockExam
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddGoodWindow";
             this.Text = "Добавление товара";
             this.Load += new System.EventHandler(this.AddGoodWindow_Load);

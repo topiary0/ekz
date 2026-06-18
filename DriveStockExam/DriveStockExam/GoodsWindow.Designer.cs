@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class GoodsWindow
     {
@@ -17,6 +17,7 @@ namespace DriveStockExam
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoodsWindow));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -237,6 +238,7 @@ namespace DriveStockExam
             this.Controls.Add(this.headerPanel);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(829, 478);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GoodsWindow";
             this.Text = "DemoMebel - товары";
             this.Load += new System.EventHandler(this.GoodsWindow_Load);

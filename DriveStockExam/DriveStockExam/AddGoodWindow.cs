@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DriveStockExam
+namespace DemoMebel
 {
     public partial class AddGoodWindow : Form
     {
