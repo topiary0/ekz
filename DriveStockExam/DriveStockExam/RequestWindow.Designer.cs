@@ -1,4 +1,4 @@
-namespace DemoMebel
+namespace DriveStockExam
 {
     partial class RequestWindow
     {
@@ -264,10 +264,13 @@ namespace DemoMebel
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.Blue;
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.Location = new System.Drawing.Point(18, 260);
             this.saveButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(135, 25);
+            this.saveButton.Size = new System.Drawing.Size(135, 28);
             this.saveButton.TabIndex = 19;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = false;
@@ -276,10 +279,13 @@ namespace DemoMebel
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Blue;
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(164, 260);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(105, 25);
+            this.cancelButton.Size = new System.Drawing.Size(105, 28);
             this.cancelButton.TabIndex = 20;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = false;

@@ -4,26 +4,29 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class GoodsCard : UserControl
     {
         private readonly DataRow productRow;
-        private readonly bool canDelete;
+        private readonly bool canManage;
+        private readonly Action<string> editAction;
         private readonly Action<string> deleteAction;
 
         public GoodsCard()
         {
             InitializeComponent();
+            Program.ApplySecondaryButton(editButton);
             Program.ApplyPlainButton(deleteButton);
             Program.SetPlaceholder(productPictureBox);
         }
 
-        public GoodsCard(DataRow row, bool showDeleteButton, Action<string> deleteProduct)
+        public GoodsCard(DataRow row, bool showManageButtons, Action<string> editProduct, Action<string> deleteProduct)
             : this()
         {
             productRow = row;
-            canDelete = showDeleteButton;
+            canManage = showManageButtons;
+            editAction = editProduct;
             deleteAction = deleteProduct;
             FillCard();
         }
@@ -78,7 +81,8 @@ namespace DemoMebel
                 ApplyTextColor(ForeColor);
             }
 
-            deleteButton.Visible = canDelete;
+            editButton.Visible = canManage;
+            deleteButton.Visible = canManage;
         }
 
         private void ApplyTextColor(Color color)
@@ -94,6 +98,14 @@ namespace DemoMebel
             priceTitleLabel.ForeColor = color;
             priceLabel.ForeColor = color;
             oldPriceLabel.ForeColor = color;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (editAction != null)
+            {
+                editAction(Convert.ToString(productRow["article"]));
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

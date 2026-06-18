@@ -1,4 +1,4 @@
-namespace DemoMebel
+namespace DriveStockExam
 {
     partial class StartWindow
     {
@@ -54,7 +54,7 @@ namespace DemoMebel
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(363, 63);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "ООО «МебельОрг»";
+            this.titleLabel.Text = "ООО «DriveStockExam»";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoPictureBox
@@ -100,17 +100,19 @@ namespace DemoMebel
             this.passwordTextBox.Location = new System.Drawing.Point(44, 148);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(184, 24);
+            this.passwordTextBox.Size = new System.Drawing.Size(178, 24);
             this.passwordTextBox.TabIndex = 4;
             // 
             // showPasswordButton
             // 
             this.showPasswordButton.BackColor = System.Drawing.Color.FromArgb(0, 0, 255);
+            this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordButton.FlatAppearance.BorderSize = 0;
             this.showPasswordButton.ForeColor = System.Drawing.Color.White;
-            this.showPasswordButton.Location = new System.Drawing.Point(235, 147);
+            this.showPasswordButton.Location = new System.Drawing.Point(232, 146);
             this.showPasswordButton.Margin = new System.Windows.Forms.Padding(2);
             this.showPasswordButton.Name = "showPasswordButton";
-            this.showPasswordButton.Size = new System.Drawing.Size(84, 25);
+            this.showPasswordButton.Size = new System.Drawing.Size(88, 28);
             this.showPasswordButton.TabIndex = 5;
             this.showPasswordButton.Text = "Показать";
             this.showPasswordButton.UseVisualStyleBackColor = false;
@@ -119,10 +121,13 @@ namespace DemoMebel
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.FromArgb(0, 0, 255); // #0000FF
-            this.loginButton.Location = new System.Drawing.Point(44, 182);
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.FlatAppearance.BorderSize = 0;
+            this.loginButton.Location = new System.Drawing.Point(44, 184);
             this.loginButton.Margin = new System.Windows.Forms.Padding(2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(274, 25);
+            this.loginButton.Size = new System.Drawing.Size(274, 28);
             this.loginButton.TabIndex = 6;
             this.loginButton.Text = "Войти";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -131,10 +136,13 @@ namespace DemoMebel
             // guestButton
             // 
             this.guestButton.BackColor = System.Drawing.Color.FromArgb(0, 0, 255); // #0000FF
-            this.guestButton.Location = new System.Drawing.Point(44, 213);
+            this.guestButton.ForeColor = System.Drawing.Color.White;
+            this.guestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guestButton.FlatAppearance.BorderSize = 0;
+            this.guestButton.Location = new System.Drawing.Point(44, 216);
             this.guestButton.Margin = new System.Windows.Forms.Padding(2);
             this.guestButton.Name = "guestButton";
-            this.guestButton.Size = new System.Drawing.Size(274, 25);
+            this.guestButton.Size = new System.Drawing.Size(274, 28);
             this.guestButton.TabIndex = 7;
             this.guestButton.Text = "Войти как гость";
             this.guestButton.UseVisualStyleBackColor = false;
@@ -147,7 +155,7 @@ namespace DemoMebel
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackColor = System.Drawing.Color.FromArgb(255, 255, 255); // #FFFFFF
-            this.ClientSize = new System.Drawing.Size(363, 263);
+            this.ClientSize = new System.Drawing.Size(363, 268);
             this.Controls.Add(this.guestButton);
             this.Controls.Add(this.showPasswordButton);
             this.Controls.Add(this.loginButton);
@@ -161,7 +169,7 @@ namespace DemoMebel
             this.MaximizeBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartWindow";
-            this.Text = "DemoMebel - вход";
+            this.Text = "DriveStockExam - вход";
             this.Load += new System.EventHandler(this.StartWindow_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
