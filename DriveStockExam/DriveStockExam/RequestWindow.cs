@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class RequestWindow : Form
     {

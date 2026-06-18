@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E0D71D46-EBF1-4EDB-B32E-4EAE4F9D5543}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DemoMebel</RootNamespace>
-    <AssemblyName>DemoMebel</AssemblyName>
+    <RootNamespace>DriveStockExam</RootNamespace>
+    <AssemblyName>DriveStockExam</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

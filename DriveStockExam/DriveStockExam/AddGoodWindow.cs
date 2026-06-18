@@ -3,11 +3,13 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class AddGoodWindow : Form
     {
+        private readonly string editingArticle;
         private string selectedImagePath;
+        private string currentPictureName;
 
         public AddGoodWindow()
         {
@@ -17,6 +19,12 @@ namespace DemoMebel
             Program.ApplyAccentButton(saveButton);
             Program.ApplyPlainButton(cancelButton);
             Program.ApplySecondaryButton(selectImageButton);
+        }
+
+        public AddGoodWindow(string article)
+            : this()
+        {
+            editingArticle = article;
         }
 
         private void AddGoodWindow_Load(object sender, EventArgs e)
@@ -38,12 +46,87 @@ namespace DemoMebel
                 Program.SetPlaceholder(productPictureBox);
                 pictureNameLabel.Text = "Изображение не выбрано";
                 measurementTextBox.Text = "шт.";
+
+                if (IsEditMode)
+                {
+                    LoadGoodForEdit();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Не удалось загрузить данные формы товара.\n\n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
+        }
+
+
+        private bool IsEditMode
+        {
+            get { return !string.IsNullOrWhiteSpace(editingArticle); }
+        }
+
+        private void LoadGoodForEdit()
+        {
+            MainDataSet.goodsDataTable goods = new MainDataSetTableAdapters.goodsTableAdapter().GetData();
+            foreach (DataRow row in goods.Rows)
+            {
+                if (Convert.ToString(row["article"]) == editingArticle)
+                {
+                    titleLabel.Text = "Редактирование товара";
+                    Text = "Редактирование товара";
+                    saveButton.Text = "Сохранить изменения";
+                    articleTextBox.Text = Convert.ToString(row["article"]);
+                    articleTextBox.ReadOnly = true;
+                    nameTextBox.Text = Convert.ToString(row["name"]);
+                    measurementTextBox.Text = Convert.ToString(row["measurment"]);
+                    priceNumericUpDown.Value = Convert.ToDecimal(row["price"]);
+                    supplierComboBox.SelectedValue = Convert.ToInt32(row["supplier"]);
+                    manufacturerComboBox.SelectedValue = Convert.ToInt32(row["manufacturer"]);
+                    categoryComboBox.SelectedValue = Convert.ToInt32(row["category"]);
+                    saleNumericUpDown.Value = Convert.ToInt32(row["sale"]);
+                    warehouseNumericUpDown.Value = Convert.ToInt32(row["warehouse"]);
+                    descriptionTextBox.Text = Convert.ToString(row["describe"]);
+                    currentPictureName = Convert.ToString(row["picture"]);
+                    pictureNameLabel.Text = string.IsNullOrWhiteSpace(currentPictureName) ? "Изображение не выбрано" : currentPictureName;
+
+                    string picturePath = Program.GetAssetPath(currentPictureName);
+                    if (File.Exists(picturePath))
+                    {
+                        productPictureBox.Image = Program.LoadImage(picturePath);
+                    }
+
+                    return;
+                }
+            }
+
+            throw new InvalidOperationException("Товар для редактирования не найден.");
+        }
+
+        private void UpdateGood(string pictureName)
+        {
+            MainDataSetTableAdapters.goodsTableAdapter adapter = new MainDataSetTableAdapters.goodsTableAdapter();
+            MainDataSet.goodsDataTable goods = adapter.GetData();
+
+            foreach (DataRow row in goods.Rows)
+            {
+                if (Convert.ToString(row["article"]) == editingArticle)
+                {
+                    row["name"] = nameTextBox.Text.Trim();
+                    row["measurment"] = measurementTextBox.Text.Trim();
+                    row["price"] = Convert.ToDouble(priceNumericUpDown.Value);
+                    row["supplier"] = Convert.ToInt32(supplierComboBox.SelectedValue);
+                    row["manufacturer"] = Convert.ToInt32(manufacturerComboBox.SelectedValue);
+                    row["category"] = Convert.ToInt32(categoryComboBox.SelectedValue);
+                    row["sale"] = Convert.ToInt32(saleNumericUpDown.Value);
+                    row["warehouse"] = Convert.ToInt32(warehouseNumericUpDown.Value);
+                    row["describe"] = descriptionTextBox.Text.Trim();
+                    row["picture"] = pictureName;
+                    adapter.Update(goods);
+                    return;
+                }
+            }
+
+            throw new InvalidOperationException("Товар для редактирования не найден.");
         }
 
         private void selectImageButton_Click(object sender, EventArgs e)
@@ -73,19 +156,26 @@ namespace DemoMebel
             {
                 string pictureName = SaveImage();
 
-                MainDataSetTableAdapters.goodsTableAdapter adapter = new MainDataSetTableAdapters.goodsTableAdapter();
-                adapter.Insert(
-                    articleTextBox.Text.Trim(),
-                    nameTextBox.Text.Trim(),
-                    measurementTextBox.Text.Trim(),
-                    Convert.ToDouble(priceNumericUpDown.Value),
-                    Convert.ToInt32(supplierComboBox.SelectedValue),
-                    Convert.ToInt32(manufacturerComboBox.SelectedValue),
-                    Convert.ToInt32(categoryComboBox.SelectedValue),
-                    Convert.ToInt32(saleNumericUpDown.Value),
-                    Convert.ToInt32(warehouseNumericUpDown.Value),
-                    descriptionTextBox.Text.Trim(),
-                    pictureName);
+                if (IsEditMode)
+                {
+                    UpdateGood(pictureName);
+                }
+                else
+                {
+                    MainDataSetTableAdapters.goodsTableAdapter adapter = new MainDataSetTableAdapters.goodsTableAdapter();
+                    adapter.Insert(
+                        articleTextBox.Text.Trim(),
+                        nameTextBox.Text.Trim(),
+                        measurementTextBox.Text.Trim(),
+                        Convert.ToDouble(priceNumericUpDown.Value),
+                        Convert.ToInt32(supplierComboBox.SelectedValue),
+                        Convert.ToInt32(manufacturerComboBox.SelectedValue),
+                        Convert.ToInt32(categoryComboBox.SelectedValue),
+                        Convert.ToInt32(saleNumericUpDown.Value),
+                        Convert.ToInt32(warehouseNumericUpDown.Value),
+                        descriptionTextBox.Text.Trim(),
+                        pictureName);
+                }
 
                 DialogResult = DialogResult.OK;
                 Close();
@@ -100,7 +190,7 @@ namespace DemoMebel
         {
             if (string.IsNullOrWhiteSpace(selectedImagePath) || !File.Exists(selectedImagePath))
             {
-                return string.Empty;
+                return currentPictureName ?? string.Empty;
             }
 
             string fileName = "good_" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + Path.GetExtension(selectedImagePath);
@@ -115,12 +205,15 @@ namespace DemoMebel
                 return Warning("Введите артикул товара.", articleTextBox);
             }
 
-            MainDataSet.goodsDataTable goods = new MainDataSetTableAdapters.goodsTableAdapter().GetData();
-            foreach (DataRow row in goods.Rows)
+            if (!IsEditMode)
             {
-                if (Convert.ToString(row["article"]) == articleTextBox.Text.Trim())
+                MainDataSet.goodsDataTable goods = new MainDataSetTableAdapters.goodsTableAdapter().GetData();
+                foreach (DataRow row in goods.Rows)
                 {
-                    return Warning("Товар с таким артикулом уже существует.", articleTextBox);
+                    if (Convert.ToString(row["article"]) == articleTextBox.Text.Trim())
+                    {
+                        return Warning("Товар с таким артикулом уже существует.", articleTextBox);
+                    }
                 }
             }
 

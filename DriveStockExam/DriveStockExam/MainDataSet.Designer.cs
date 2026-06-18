@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DemoMebel {
+namespace DriveStockExam {
     
     
     /// <summary>
@@ -4829,7 +4829,7 @@ namespace DemoMebel {
         }
     }
 }
-namespace DemoMebel.MainDataSetTableAdapters {
+namespace DriveStockExam.MainDataSetTableAdapters {
     
     
     /// <summary>
@@ -4987,7 +4987,7 @@ namespace DemoMebel.MainDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5373,7 +5373,7 @@ SELECT article, name, measurment, price, supplier, manufacturer, category, sale,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6014,7 +6014,7 @@ SELECT article, name, measurment, price, supplier, manufacturer, category, sale,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6386,7 +6386,7 @@ SELECT id, article, count, purchase_date, delivery_date, sale_points, login, cod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6943,7 +6943,7 @@ SELECT id, article, count, purchase_date, delivery_date, sale_points, login, cod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7267,7 +7267,7 @@ SELECT id, article, count, purchase_date, delivery_date, sale_points, login, cod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7591,7 +7591,7 @@ SELECT id, article, count, purchase_date, delivery_date, sale_points, login, cod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7915,7 +7915,7 @@ SELECT id, article, count, purchase_date, delivery_date, sale_points, login, cod
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8251,7 +8251,7 @@ SELECT role, full_name, login, password FROM users WHERE (login = @login)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DemoMebel.Properties.Settings.Default.user23ConnectionString;
+            this._connection.ConnectionString = global::DriveStockExam.Properties.Settings.Default.user23ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
