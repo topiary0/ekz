@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace DriveStockExam
+namespace DemoMebel
 {
     public partial class GoodsWindow : Form
     {
@@ -22,8 +22,6 @@ namespace DriveStockExam
             currentRole = roleId;
             Program.ApplyFormStyle(this);
             Program.ApplyHeaderStyle(headerPanel);
-            toolsPanel.BackColor = Program.MainBackColor;
-            productsPanel.BackColor = Program.MainBackColor;
             Program.ApplyAccentButton(addProductButton);
             Program.ApplySecondaryButton(ordersButton);
             Program.ApplyPlainButton(refreshButton);

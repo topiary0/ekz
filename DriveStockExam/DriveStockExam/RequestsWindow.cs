@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace DriveStockExam
+namespace DemoMebel
 {
     public partial class RequestsWindow : Form
     {
@@ -19,7 +19,6 @@ namespace DriveStockExam
             currentRole = roleId;
             Program.ApplyFormStyle(this);
             Program.ApplyHeaderStyle(headerPanel);
-            toolsPanel.BackColor = Program.MainBackColor;
             Program.ApplyAccentButton(addOrderButton);
             Program.ApplyPlainButton(editOrderButton);
             Program.ApplyPlainButton(deleteOrderButton);

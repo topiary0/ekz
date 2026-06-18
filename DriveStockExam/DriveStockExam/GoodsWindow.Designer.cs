@@ -1,4 +1,4 @@
-namespace DriveStockExam
+namespace DemoMebel
 {
     partial class GoodsWindow
     {
@@ -17,6 +17,7 @@ namespace DriveStockExam
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoodsWindow));
             this.headerPanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,7 @@ namespace DriveStockExam
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(66, 18);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -73,6 +74,7 @@ namespace DriveStockExam
             // 
             // toolsPanel
             // 
+            this.toolsPanel.BackColor = System.Drawing.Color.Cyan;
             this.toolsPanel.Controls.Add(this.countLabel);
             this.toolsPanel.Controls.Add(this.addProductButton);
             this.toolsPanel.Controls.Add(this.ordersButton);
@@ -228,6 +230,7 @@ namespace DriveStockExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(888, 493);
             this.Controls.Add(this.productsPanel);
@@ -235,8 +238,9 @@ namespace DriveStockExam
             this.Controls.Add(this.headerPanel);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimumSize = new System.Drawing.Size(829, 478);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GoodsWindow";
-            this.Text = "ВелосипедДрайв - товары";
+            this.Text = "DemoMebel - товары";
             this.Load += new System.EventHandler(this.GoodsWindow_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();

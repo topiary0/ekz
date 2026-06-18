@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace DriveStockExam
+namespace DemoMebel
 {
     public partial class StartWindow : Form
     {
@@ -11,13 +11,13 @@ namespace DriveStockExam
             Program.ApplyFormStyle(this);
             Program.ApplyHeaderStyle(headerPanel);
             Program.ApplyAccentButton(loginButton);
+            Program.ApplySecondaryButton(showPasswordButton);
             Program.ApplySecondaryButton(guestButton);
         }
 
         private void StartWindow_Load(object sender, EventArgs e)
         {
             Program.SetLogo(logoPictureBox);
-            titleLabel.Text = Text;
             logoPictureBox.Visible = logoPictureBox.Image != null;
             passwordTextBox.UseSystemPasswordChar = true;
             loginTextBox.Select();
@@ -54,6 +54,12 @@ namespace DriveStockExam
             {
                 MessageBox.Show("Не удалось выполнить вход.\n\n" + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void showPasswordButton_Click(object sender, EventArgs e)
+        {
+            passwordTextBox.UseSystemPasswordChar = !passwordTextBox.UseSystemPasswordChar;
+            showPasswordButton.Text = passwordTextBox.UseSystemPasswordChar ? "Показать" : "Скрыть";
         }
 
         private void guestButton_Click(object sender, EventArgs e)

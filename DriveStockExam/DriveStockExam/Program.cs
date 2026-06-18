@@ -1,9 +1,10 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace DriveStockExam
+namespace DemoMebel
 {
     internal static class Program
     {
@@ -13,10 +14,10 @@ namespace DriveStockExam
         public const int ClientRoleId = 3;
 
         public static readonly Color MainBackColor = Color.White;
-        public static readonly Color SecondaryBackColor = ColorTranslator.FromHtml("#6A5ACD");
-        public static readonly Color AccentColor = ColorTranslator.FromHtml("#4B0082");
-        public static readonly Color HighSaleColor = ColorTranslator.FromHtml("#483D8B");
-        public static readonly Font MainFont = new Font("Arial", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
+        public static readonly Color SecondaryBackColor = ColorTranslator.FromHtml("#00FFFF");
+        public static readonly Color AccentColor = ColorTranslator.FromHtml("#0000FF");
+        public static readonly Color HighSaleColor = ColorTranslator.FromHtml("#008080");
+        public static readonly Font MainFont = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point, 204);
 
         [STAThread]
         private static void Main()
@@ -33,58 +34,31 @@ namespace DriveStockExam
 
         public static void ApplyFormStyle(Form form)
         {
-            form.BackColor = MainBackColor;
-            form.ForeColor = Color.Black;
-            form.Font = MainFont;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Icon = GetAppIcon();
         }
 
         public static void ApplyHeaderStyle(Panel panel)
         {
-            panel.BackColor = SecondaryBackColor;
         }
 
         public static void ApplyAccentButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-            button.BackColor = AccentColor;
-            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplySecondaryButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-            button.BackColor = SecondaryBackColor;
-            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplyPlainButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderColor = SecondaryBackColor;
-            button.BackColor = Color.White;
-            button.ForeColor = AccentColor;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplyGridStyle(DataGridView gridView)
         {
-            gridView.BackgroundColor = MainBackColor;
-            gridView.BorderStyle = BorderStyle.FixedSingle;
-            gridView.EnableHeadersVisualStyles = false;
-            gridView.GridColor = SecondaryBackColor;
-            gridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            gridView.ColumnHeadersDefaultCellStyle.BackColor = SecondaryBackColor;
-            gridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            gridView.DefaultCellStyle.Font = MainFont;
-            gridView.DefaultCellStyle.SelectionBackColor = AccentColor;
-            gridView.DefaultCellStyle.SelectionForeColor = Color.White;
-            gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
         }
 
         public static void SetLogo(PictureBox pictureBox)
@@ -141,10 +115,52 @@ namespace DriveStockExam
             }
             catch (Exception)
             {
-                // Если иконка не загрузилась, используем стандартную
+                // Если файл .ico поврежден или имеет неверный формат, пробуем собрать иконку из PNG-логотипа.
+            }
+
+            try
+            {
+                Icon icon = CreateIconFromImage("icon.png");
+                if (icon != null)
+                {
+                    return icon;
+                }
+            }
+            catch (Exception)
+            {
+                // Если иконка не загрузилась, используем стандартную.
             }
 
             return SystemIcons.Application;
         }
+
+        private static Icon CreateIconFromImage(string fileName)
+        {
+            string path = GetAssetPath(fileName);
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+
+            using (Bitmap bitmap = new Bitmap(path))
+            {
+                IntPtr handle = bitmap.GetHicon();
+                try
+                {
+                    using (Icon icon = Icon.FromHandle(handle))
+                    {
+                        return (Icon)icon.Clone();
+                    }
+                }
+                finally
+                {
+                    DestroyIcon(handle);
+                }
+            }
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern bool DestroyIcon(IntPtr handle);
+
     }
 }
