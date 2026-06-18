@@ -294,7 +294,7 @@ namespace DemoMebel
             this.selectImageButton.Location = new System.Drawing.Point(500, 211);
             this.selectImageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectImageButton.Name = "selectImageButton";
-            this.selectImageButton.Size = new System.Drawing.Size(180, 22);
+            this.selectImageButton.Size = new System.Drawing.Size(180, 30);
             this.selectImageButton.TabIndex = 22;
             this.selectImageButton.Text = "Выбрать изображение";
             this.selectImageButton.UseVisualStyleBackColor = false;
@@ -315,7 +315,7 @@ namespace DemoMebel
             this.saveButton.Location = new System.Drawing.Point(20, 390);
             this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(135, 25);
+            this.saveButton.Size = new System.Drawing.Size(170, 30);
             this.saveButton.TabIndex = 24;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = false;
@@ -324,10 +324,10 @@ namespace DemoMebel
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Blue;
-            this.cancelButton.Location = new System.Drawing.Point(165, 390);
+            this.cancelButton.Location = new System.Drawing.Point(200, 390);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(105, 25);
+            this.cancelButton.Size = new System.Drawing.Size(120, 30);
             this.cancelButton.TabIndex = 25;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = false;

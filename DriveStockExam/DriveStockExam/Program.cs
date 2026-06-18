@@ -44,17 +44,32 @@ namespace DemoMebel
 
         public static void ApplyAccentButton(Button button)
         {
-            button.Cursor = Cursors.Hand;
+            ApplyButtonBaseStyle(button, AccentColor, Color.White);
         }
 
         public static void ApplySecondaryButton(Button button)
         {
-            button.Cursor = Cursors.Hand;
+            ApplyButtonBaseStyle(button, AccentColor, Color.White);
         }
 
         public static void ApplyPlainButton(Button button)
         {
+            ApplyButtonBaseStyle(button, AccentColor, Color.White);
+        }
+
+        private static void ApplyButtonBaseStyle(Button button, Color backColor, Color foreColor)
+        {
             button.Cursor = Cursors.Hand;
+            button.BackColor = backColor;
+            button.ForeColor = foreColor;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.TextAlign = ContentAlignment.MiddleCenter;
+            button.MinimumSize = new Size(100, 28);
+            if (button.Height < 28)
+            {
+                button.Height = 28;
+            }
         }
 
         public static void ApplyGridStyle(DataGridView gridView)

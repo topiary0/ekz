@@ -205,11 +205,27 @@ namespace DemoMebel
             {
                 foreach (DataRow row in rows)
                 {
-                    productsPanel.Controls.Add(new GoodsCard(row, CanManageProducts, DeleteProduct));
+                    productsPanel.Controls.Add(new GoodsCard(row, CanManageProducts, EditProduct, DeleteProduct));
                 }
             }
 
             productsPanel.ResumeLayout();
+        }
+
+        private void EditProduct(string article)
+        {
+            if (!CanManageProducts)
+            {
+                return;
+            }
+
+            using (AddGoodWindow form = new AddGoodWindow(article))
+            {
+                if (form.ShowDialog(this) == DialogResult.OK)
+                {
+                    LoadGoods();
+                }
+            }
         }
 
         private void DeleteProduct(string article)
