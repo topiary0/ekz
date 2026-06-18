@@ -163,10 +163,13 @@ namespace DriveStockExam
             // editButton
             //
             this.editButton.BackColor = System.Drawing.Color.Blue;
+            this.editButton.ForeColor = System.Drawing.Color.White;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.FlatAppearance.BorderSize = 0;
             this.editButton.Location = new System.Drawing.Point(542, 101);
             this.editButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(104, 26);
+            this.editButton.Size = new System.Drawing.Size(104, 28);
             this.editButton.TabIndex = 13;
             this.editButton.Text = "Редактировать";
             this.editButton.UseVisualStyleBackColor = false;
@@ -175,10 +178,13 @@ namespace DriveStockExam
             // deleteButton
             //
             this.deleteButton.BackColor = System.Drawing.Color.Blue;
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.FlatAppearance.BorderSize = 0;
             this.deleteButton.Location = new System.Drawing.Point(542, 130);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(104, 26);
+            this.deleteButton.Size = new System.Drawing.Size(104, 28);
             this.deleteButton.TabIndex = 14;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = false;

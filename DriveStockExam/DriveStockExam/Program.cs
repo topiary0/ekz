@@ -65,7 +65,7 @@ namespace DriveStockExam
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
             button.TextAlign = ContentAlignment.MiddleCenter;
-            button.MinimumSize = new Size(100, 28);
+            button.MinimumSize = new Size(button.MinimumSize.Width, 28);
             if (button.Height < 28)
             {
                 button.Height = 28;

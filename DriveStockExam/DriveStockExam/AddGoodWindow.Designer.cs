@@ -291,6 +291,9 @@ namespace DriveStockExam
             // selectImageButton
             // 
             this.selectImageButton.BackColor = System.Drawing.Color.Blue;
+            this.selectImageButton.ForeColor = System.Drawing.Color.White;
+            this.selectImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectImageButton.FlatAppearance.BorderSize = 0;
             this.selectImageButton.Location = new System.Drawing.Point(500, 211);
             this.selectImageButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectImageButton.Name = "selectImageButton";
@@ -312,6 +315,9 @@ namespace DriveStockExam
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.Blue;
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.Location = new System.Drawing.Point(20, 390);
             this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveButton.Name = "saveButton";
@@ -324,6 +330,9 @@ namespace DriveStockExam
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Blue;
+            this.cancelButton.ForeColor = System.Drawing.Color.White;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.FlatAppearance.BorderSize = 0;
             this.cancelButton.Location = new System.Drawing.Point(200, 390);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";

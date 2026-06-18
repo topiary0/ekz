@@ -106,10 +106,13 @@ namespace DriveStockExam
             // 
             this.addProductButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.addProductButton.BackColor = System.Drawing.Color.Blue;
+            this.addProductButton.ForeColor = System.Drawing.Color.White;
+            this.addProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addProductButton.FlatAppearance.BorderSize = 0;
             this.addProductButton.Location = new System.Drawing.Point(750, 33);
             this.addProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addProductButton.Name = "addProductButton";
-            this.addProductButton.Size = new System.Drawing.Size(120, 22);
+            this.addProductButton.Size = new System.Drawing.Size(120, 28);
             this.addProductButton.TabIndex = 8;
             this.addProductButton.Text = "Добавить товар";
             this.addProductButton.UseVisualStyleBackColor = false;
@@ -119,10 +122,13 @@ namespace DriveStockExam
             // 
             this.ordersButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ordersButton.BackColor = System.Drawing.Color.Blue;
+            this.ordersButton.ForeColor = System.Drawing.Color.White;
+            this.ordersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersButton.FlatAppearance.BorderSize = 0;
             this.ordersButton.Location = new System.Drawing.Point(626, 33);
             this.ordersButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ordersButton.Name = "ordersButton";
-            this.ordersButton.Size = new System.Drawing.Size(112, 22);
+            this.ordersButton.Size = new System.Drawing.Size(112, 28);
             this.ordersButton.TabIndex = 7;
             this.ordersButton.Text = "Заказы";
             this.ordersButton.UseVisualStyleBackColor = false;
@@ -132,10 +138,13 @@ namespace DriveStockExam
             // 
             this.refreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.refreshButton.BackColor = System.Drawing.Color.Blue;
+            this.refreshButton.ForeColor = System.Drawing.Color.White;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.FlatAppearance.BorderSize = 0;
             this.refreshButton.Location = new System.Drawing.Point(501, 33);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(112, 22);
+            this.refreshButton.Size = new System.Drawing.Size(112, 28);
             this.refreshButton.TabIndex = 6;
             this.refreshButton.Text = "Обновить";
             this.refreshButton.UseVisualStyleBackColor = false;
