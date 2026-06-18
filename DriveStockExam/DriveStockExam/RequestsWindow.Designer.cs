@@ -1,4 +1,4 @@
-namespace DemoMebel
+namespace DriveStockExam
 {
     partial class RequestsWindow
     {
@@ -76,10 +76,13 @@ namespace DemoMebel
             // 
             this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.backButton.BackColor = System.Drawing.Color.Blue;
+            this.backButton.ForeColor = System.Drawing.Color.White;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.Location = new System.Drawing.Point(720, 10);
             this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 22);
+            this.backButton.Size = new System.Drawing.Size(75, 28);
             this.backButton.TabIndex = 5;
             this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = false;
@@ -89,10 +92,13 @@ namespace DemoMebel
             // 
             this.refreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.refreshButton.BackColor = System.Drawing.Color.Blue;
+            this.refreshButton.ForeColor = System.Drawing.Color.White;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.FlatAppearance.BorderSize = 0;
             this.refreshButton.Location = new System.Drawing.Point(633, 10);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 22);
+            this.refreshButton.Size = new System.Drawing.Size(75, 28);
             this.refreshButton.TabIndex = 4;
             this.refreshButton.Text = "Обновить";
             this.refreshButton.UseVisualStyleBackColor = false;
@@ -102,10 +108,13 @@ namespace DemoMebel
             // 
             this.deleteOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteOrderButton.BackColor = System.Drawing.Color.Blue;
+            this.deleteOrderButton.ForeColor = System.Drawing.Color.White;
+            this.deleteOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteOrderButton.FlatAppearance.BorderSize = 0;
             this.deleteOrderButton.Location = new System.Drawing.Point(546, 10);
             this.deleteOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteOrderButton.Name = "deleteOrderButton";
-            this.deleteOrderButton.Size = new System.Drawing.Size(75, 22);
+            this.deleteOrderButton.Size = new System.Drawing.Size(75, 28);
             this.deleteOrderButton.TabIndex = 3;
             this.deleteOrderButton.Text = "Удалить";
             this.deleteOrderButton.UseVisualStyleBackColor = false;
@@ -115,10 +124,13 @@ namespace DemoMebel
             // 
             this.editOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.editOrderButton.BackColor = System.Drawing.Color.Blue;
+            this.editOrderButton.ForeColor = System.Drawing.Color.White;
+            this.editOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editOrderButton.FlatAppearance.BorderSize = 0;
             this.editOrderButton.Location = new System.Drawing.Point(459, 10);
             this.editOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editOrderButton.Name = "editOrderButton";
-            this.editOrderButton.Size = new System.Drawing.Size(75, 22);
+            this.editOrderButton.Size = new System.Drawing.Size(75, 28);
             this.editOrderButton.TabIndex = 2;
             this.editOrderButton.Text = "Изменить";
             this.editOrderButton.UseVisualStyleBackColor = false;
@@ -128,10 +140,13 @@ namespace DemoMebel
             // 
             this.addOrderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.addOrderButton.BackColor = System.Drawing.Color.Blue;
+            this.addOrderButton.ForeColor = System.Drawing.Color.White;
+            this.addOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addOrderButton.FlatAppearance.BorderSize = 0;
             this.addOrderButton.Location = new System.Drawing.Point(372, 10);
             this.addOrderButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addOrderButton.Name = "addOrderButton";
-            this.addOrderButton.Size = new System.Drawing.Size(75, 22);
+            this.addOrderButton.Size = new System.Drawing.Size(75, 28);
             this.addOrderButton.TabIndex = 1;
             this.addOrderButton.Text = "Добавить";
             this.addOrderButton.UseVisualStyleBackColor = false;
@@ -179,7 +194,7 @@ namespace DemoMebel
             this.MinimumSize = new System.Drawing.Size(739, 409);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RequestsWindow";
-            this.Text = "DemoMebel - заказы";
+            this.Text = "DriveStockExam - заказы";
             this.Load += new System.EventHandler(this.RequestsWindow_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();

@@ -1,11 +1,11 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("DemoMebel")]
-[assembly: AssemblyDescription("DemoMebel")]
+[assembly: AssemblyTitle("DriveStockExam")]
+[assembly: AssemblyDescription("DriveStockExam")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DemoMebel")]
+[assembly: AssemblyProduct("DriveStockExam")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
