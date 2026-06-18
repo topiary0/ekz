@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace DriveStockExam
@@ -33,58 +34,31 @@ namespace DriveStockExam
 
         public static void ApplyFormStyle(Form form)
         {
-            form.BackColor = MainBackColor;
-            form.ForeColor = Color.Black;
-            form.Font = MainFont;
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Icon = GetAppIcon();
         }
 
         public static void ApplyHeaderStyle(Panel panel)
         {
-            panel.BackColor = SecondaryBackColor;
         }
 
         public static void ApplyAccentButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-            button.BackColor = AccentColor;
-            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplySecondaryButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderSize = 0;
-            button.BackColor = AccentColor;
-            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplyPlainButton(Button button)
         {
-            button.FlatStyle = FlatStyle.Flat;
-            button.FlatAppearance.BorderColor = AccentColor;
-            button.BackColor = AccentColor;
-            button.ForeColor = Color.White;
             button.Cursor = Cursors.Hand;
         }
 
         public static void ApplyGridStyle(DataGridView gridView)
         {
-            gridView.BackgroundColor = MainBackColor;
-            gridView.BorderStyle = BorderStyle.FixedSingle;
-            gridView.EnableHeadersVisualStyles = false;
-            gridView.GridColor = SecondaryBackColor;
-            gridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            gridView.ColumnHeadersDefaultCellStyle.BackColor = SecondaryBackColor;
-            gridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            gridView.DefaultCellStyle.Font = MainFont;
-            gridView.DefaultCellStyle.SelectionBackColor = AccentColor;
-            gridView.DefaultCellStyle.SelectionForeColor = Color.White;
-            gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10F, FontStyle.Bold, GraphicsUnit.Point, 204);
         }
 
         public static void SetLogo(PictureBox pictureBox)
@@ -146,7 +120,7 @@ namespace DriveStockExam
 
             try
             {
-                Icon icon = CreateIconFromPng("icon.png");
+                Icon icon = CreateIconFromImage("icon.png");
                 if (icon != null)
                 {
                     return icon;
@@ -160,7 +134,7 @@ namespace DriveStockExam
             return SystemIcons.Application;
         }
 
-        private static Icon CreateIconFromPng(string fileName)
+        private static Icon CreateIconFromImage(string fileName)
         {
             string path = GetAssetPath(fileName);
             if (!File.Exists(path))
@@ -168,26 +142,25 @@ namespace DriveStockExam
                 return null;
             }
 
-            byte[] pngBytes = File.ReadAllBytes(path);
-            using (MemoryStream stream = new MemoryStream())
-            using (BinaryWriter writer = new BinaryWriter(stream))
+            using (Bitmap bitmap = new Bitmap(path))
             {
-                writer.Write((ushort)0);
-                writer.Write((ushort)1);
-                writer.Write((ushort)1);
-                writer.Write((byte)0);
-                writer.Write((byte)0);
-                writer.Write((byte)0);
-                writer.Write((byte)0);
-                writer.Write((ushort)1);
-                writer.Write((ushort)32);
-                writer.Write(pngBytes.Length);
-                writer.Write(22);
-                writer.Write(pngBytes);
-                writer.Flush();
-                stream.Position = 0;
-                return new Icon(stream);
+                IntPtr handle = bitmap.GetHicon();
+                try
+                {
+                    using (Icon icon = Icon.FromHandle(handle))
+                    {
+                        return (Icon)icon.Clone();
+                    }
+                }
+                finally
+                {
+                    DestroyIcon(handle);
+                }
             }
         }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern bool DestroyIcon(IntPtr handle);
+
     }
 }

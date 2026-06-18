@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37216.2 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveStockExam", "DriveStockExam\DriveStockExam.csproj", "{E0D71D46-EBF1-4EDB-B32E-4EAE4F9D5543}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMebel", "DriveStockExam\DriveStockExam.csproj", "{E0D71D46-EBF1-4EDB-B32E-4EAE4F9D5543}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

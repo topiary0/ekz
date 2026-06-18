@@ -57,6 +57,7 @@ namespace DriveStockExam
             // 
             // toolsPanel
             // 
+            this.toolsPanel.BackColor = System.Drawing.Color.Cyan;
             this.toolsPanel.Controls.Add(this.backButton);
             this.toolsPanel.Controls.Add(this.refreshButton);
             this.toolsPanel.Controls.Add(this.deleteOrderButton);
@@ -167,6 +168,7 @@ namespace DriveStockExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(813, 425);
             this.Controls.Add(this.ordersGridView);

@@ -22,8 +22,6 @@ namespace DriveStockExam
             currentRole = roleId;
             Program.ApplyFormStyle(this);
             Program.ApplyHeaderStyle(headerPanel);
-            toolsPanel.BackColor = Program.SecondaryBackColor;
-            productsPanel.BackColor = Program.MainBackColor;
             Program.ApplyAccentButton(addProductButton);
             Program.ApplySecondaryButton(ordersButton);
             Program.ApplyPlainButton(refreshButton);

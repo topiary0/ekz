@@ -15,7 +15,6 @@ namespace DriveStockExam
         public GoodsCard()
         {
             InitializeComponent();
-            Font = Program.MainFont;
             Program.ApplyPlainButton(deleteButton);
             Program.SetPlaceholder(productPictureBox);
         }
@@ -76,12 +75,9 @@ namespace DriveStockExam
             }
             else
             {
-                BackColor = Color.White;
-                ApplyTextColor(Color.Black);
+                ApplyTextColor(ForeColor);
             }
 
-            saleLabel.BackColor = Program.SecondaryBackColor;
-            saleLabel.ForeColor = Color.White;
             deleteButton.Visible = canDelete;
         }
 

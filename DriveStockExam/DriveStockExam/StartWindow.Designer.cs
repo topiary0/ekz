@@ -44,15 +44,16 @@ namespace DriveStockExam
             // 
             // titleLabel
             // 
-            this.titleLabel.AutoSize = true;
+            this.titleLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.titleLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(113, 19);
+            this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(105, 24);
+            this.titleLabel.Size = new System.Drawing.Size(363, 63);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "DemoMebel";
+            this.titleLabel.Text = "ООО «МебельОрг»";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // logoPictureBox
             // 
@@ -129,6 +130,7 @@ namespace DriveStockExam
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BackColor = System.Drawing.Color.FromArgb(255, 255, 255); // #FFFFFF
             this.ClientSize = new System.Drawing.Size(363, 263);
             this.Controls.Add(this.guestButton);
