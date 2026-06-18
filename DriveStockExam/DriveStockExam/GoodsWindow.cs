@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class GoodsWindow : Form
     {

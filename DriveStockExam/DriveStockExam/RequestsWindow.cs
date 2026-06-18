@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class RequestsWindow : Form
     {

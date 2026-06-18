@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace DemoMebel
+namespace DriveStockExam
 {
     public partial class StartWindow : Form
     {

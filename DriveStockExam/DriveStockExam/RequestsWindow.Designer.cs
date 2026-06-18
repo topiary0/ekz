@@ -1,4 +1,4 @@
-namespace DemoMebel
+namespace DriveStockExam
 {
     partial class RequestsWindow
     {
@@ -179,7 +179,7 @@ namespace DemoMebel
             this.MinimumSize = new System.Drawing.Size(739, 409);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RequestsWindow";
-            this.Text = "DemoMebel - заказы";
+            this.Text = "DriveStockExam - заказы";
             this.Load += new System.EventHandler(this.RequestsWindow_Load);
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
